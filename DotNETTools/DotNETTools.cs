@@ -85,6 +85,13 @@ namespace CADHERO
                 return new FileTools();
             }
         }
+        public IDirectoryTools DirectoryTools
+        {
+            get
+            {
+                return new DirectoryTools();
+            }
+        }
     }
 
 
@@ -367,6 +374,96 @@ namespace CADHERO
                 return false; 
             }
           
+
+
+        }
+    }
+
+
+    [ComVisible(true)]
+    [Guid("FA00BDB4-D920-4795-A599-77F3781F68A5")]
+    [ClassInterface(ClassInterfaceType.None)]
+    [ProgId("CADHERO.DirectoryTools")]
+    public class DirectoryTools : IDirectoryTools
+    {
+        public String[] GetAllFiles(string Path, string SearchPattern, bool AllDirectories)
+        {
+            try
+            {
+                var SearchOption = AllDirectories ? System.IO.SearchOption.AllDirectories : System.IO.SearchOption.TopDirectoryOnly;
+                return System.IO.Directory.GetFiles(Path, SearchPattern, SearchOption);
+               
+            }
+            catch (Exception)
+            {
+
+                return new string[] { };
+            }
+
+        }
+        public bool CreateDirectory(string Path)
+        {
+            try
+            {
+                System.IO.Directory.CreateDirectory(Path);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
+        }
+        public DateTime GetLastWriteTime(string Path)
+        {
+
+            return System.IO.Directory.GetLastWriteTime(Path);
+
+
+        }
+        public DateTime GetLastWriteTimeUtc(string Path)
+        {
+
+            return System.IO.Directory.GetLastWriteTimeUtc(Path);
+
+
+        }
+        public DateTime GetLastAccessTime(string Path)
+        {
+
+            return System.IO.Directory.GetLastAccessTime(Path);
+
+
+        }
+        public DateTime GetLastAccessTimeUtc(string Path)
+        {
+
+            return System.IO.Directory.GetLastAccessTimeUtc(Path);
+
+
+        }
+        public bool Exists(string Path)
+        {
+
+            return System.IO.Directory.Exists(Path);
+
+
+        }
+        public bool Delete(string Path)
+        {
+            try
+            {
+                System.IO.Directory.Delete(Path);
+                return true;
+
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+
 
 
         }

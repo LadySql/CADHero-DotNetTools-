@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DotNETTools.cs" />
     <Compile Include="IBrowseTools.cs" />
+    <Compile Include="IDirectoryTools.cs" />
     <Compile Include="IDotNETTools.cs" />
     <Compile Include="IFileTools.cs" />
     <Compile Include="IInternetTools.cs" />
