@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("VBDotNETTools")]
+[assembly: AssemblyTitle("DotNETTools")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("VBDotNETTools")]
+[assembly: AssemblyCompany("CADHERO Consulting")]
+[assembly: AssemblyProduct("DotNETTools")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -17,10 +17,10 @@ using System.Runtime.InteropServices;
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
 // COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fd40b7a7-f72a-4ebe-a54c-05c2a8b5416d")]
+[assembly: Guid("22cbf454-c3a2-43c6-bb50-913d463159dc")]
 
 // Version information for an assembly consists of the following four values:
 //
