@@ -19,6 +19,5 @@ namespace CADHERO
         int IndexOf(string Source, char value);       
         Char[] ToCharArray(string Source);
         int LastIndexOf(string Source, char value);
-
     }
 }

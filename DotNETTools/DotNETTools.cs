@@ -308,7 +308,17 @@ namespace CADHERO
             return System.IO.Path.GetRandomFileName();
 
         }
-       
+        public string Combine(string[] Paths)
+        {
+            return System.IO.Path.Combine(Paths);
+
+        }
+        public string ChangeExtension(string Path, string Extension)
+        {
+            
+            return System.IO.Path.ChangeExtension(Path,Extension);
+
+        }
 
     }
 
