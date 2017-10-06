@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNETTools", "DotNETTools\DotNETTools.csproj", "{22CBF454-C3A2-43C6-BB50-913D463159DC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DotNetTools.Installer", "DotNetTools.Installer\DotNetTools.Installer.vdproj", "{DDD3DF58-6AAA-4337-BECA-AE8313F15BE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{22CBF454-C3A2-43C6-BB50-913D463159DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22CBF454-C3A2-43C6-BB50-913D463159DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22CBF454-C3A2-43C6-BB50-913D463159DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD3DF58-6AAA-4337-BECA-AE8313F15BE4}.Debug|Any CPU.ActiveCfg = Debug
+		{DDD3DF58-6AAA-4337-BECA-AE8313F15BE4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

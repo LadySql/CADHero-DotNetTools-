@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace CADHERO
 {
-    public enum AssemblyInfo
+    internal enum AssemblyInfo
     {
         ProductName,
         CompanyName,
@@ -473,6 +473,22 @@ namespace CADHERO
 
                 return false;
             }
+
+
+
+        }
+        public String GetDirectoryRoot(string Path)
+        {
+            
+               return  System.IO.Directory.GetDirectoryRoot(Path);
+               
+ 
+
+        }
+        public String[] GetDirectories(string Path)
+        {
+
+            return System.IO.Directory.GetDirectories(Path);
 
 
 

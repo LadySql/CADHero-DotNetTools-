@@ -12,6 +12,9 @@ namespace CADHERO
           DateTime GetLastAccessTimeUtc(string Path);
           bool Exists(string Path);
           bool Delete(string Path);
+          String GetDirectoryRoot(string Path);
+          String[] GetDirectories(string Path);
        
+
     }
 }
