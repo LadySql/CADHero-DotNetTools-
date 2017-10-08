@@ -6,7 +6,7 @@ namespace CADHERO
     [InterfaceType(ComInterfaceType.InterfaceIsIDispatch)]
     public interface IDotNETTools
     {
-
+        IDateTimeTools DateTimeTools { get; }
         IStringTools StringTools { get; }
         IBrowseTools BrowseTools { get; }
         IInternetTools InternetTools { get; }

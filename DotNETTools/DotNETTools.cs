@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -10,6 +11,17 @@ namespace CADHERO
         ProductName,
         CompanyName,
         ProductVersion,
+    }
+    public enum Culture
+    {
+        US,
+        UK,
+        France,
+        Germany,
+        Maghreb_DZ_MA_TN,
+        Japan,
+        China,
+        SouthKorea
     }
 
     [ComVisible(true)]
@@ -90,6 +102,13 @@ namespace CADHERO
             get
             {
                 return new DirectoryTools();
+            }
+        }
+        public IDateTimeTools DateTimeTools
+        {
+            get
+            {
+                return new DateTimeTools();
             }
         }
     }
@@ -489,6 +508,125 @@ namespace CADHERO
         {
 
             return System.IO.Directory.GetDirectories(Path);
+
+
+
+        }
+    }
+
+    [ComVisible(true)]
+    [Guid("5A6D083F-4375-40A5-BAB5-7260CA3B3C29")]
+    [ClassInterface(ClassInterfaceType.None)]
+    [ProgId("CADHERO.DateTimeTools")]
+    public class DateTimeTools : IDateTimeTools
+    {
+       
+        public int DaysInMonth(int Year, int Month)
+        {
+
+            return System.DateTime.DaysInMonth( Year,  Month);
+
+
+        }
+        public DateTime UtcNow()
+        {
+
+            return System.DateTime.UtcNow;
+
+        }
+        public DateTime Today()
+        {
+
+            return System.DateTime.Today;
+
+
+        }
+        public int Compare(DateTime t1, DateTime t2)
+        {
+            return System.DateTime.Compare(t1,t2);
+        }
+        public bool IsLeapYear(int Year)
+        {
+
+            return System.DateTime.IsLeapYear(Year);
+
+
+        }
+        public DateTime TryParse(string s)
+        {
+              DateTime result = default(DateTime); 
+              System.DateTime.TryParse(s, out result);
+              return result; 
+
+
+        }
+        public DateTime ParseCultureAware(string DateTime, Culture culture)
+        {
+          
+            CultureInfo CultureInfo = null;
+            switch (culture)
+            {
+                case Culture.US:
+                    CultureInfo = new CultureInfo("en-US");
+                    break;
+                case Culture.UK:
+                    CultureInfo = new CultureInfo("en-UK");
+                    break;
+                case Culture.France:
+                    CultureInfo = new CultureInfo("fr-FR");
+                    break;
+                case Culture.Germany:
+                    CultureInfo = new CultureInfo("de-DE");
+                    break;
+                case Culture.Maghreb_DZ_MA_TN:
+                    CultureInfo = new CultureInfo("ar-TN");
+                    break;
+                case Culture.Japan:
+                    CultureInfo = new CultureInfo("jp-JP");
+                    break;
+                case Culture.China:
+                    CultureInfo = new CultureInfo("cn-CN");
+                    break;
+                case Culture.SouthKorea:
+                    CultureInfo = new CultureInfo("sk-SK");
+                    break;
+                default:
+                    CultureInfo = new CultureInfo("en-US");
+                    break;
+            }
+
+            DateTime result = default(DateTime);
+            return System.DateTime.Parse(DateTime, CultureInfo);
+             
+
+
+        }
+        public String ToShortDateString(DateTime DateTime)
+        {
+
+            return DateTime.ToShortDateString();
+
+
+        }
+        public String ToLongDateString(DateTime DateTime)
+        {
+
+            return DateTime.ToLongDateString();
+
+
+
+        }
+        public String ToShortTimeString(DateTime DateTime)
+        {
+
+            return DateTime.ToShortTimeString();
+
+
+        }
+        public String ToLongTimeString(DateTime DateTime)
+        {
+
+            return DateTime.ToLongTimeString();
 
 
 
